@@ -1,5 +1,21 @@
+"""
+Please write a function named total_units(my_list: ShoppingList), which takes a ShoppingList type object as its argument. The function should calculate the total number of units listed, and return the value.
+
+You can use the following code to test your function:
+
+if __name__ == "__main__":
+    my_list = ShoppingList()
+    my_list.add("bananas", 10)
+    my_list.add("apples", 5)
+    my_list.add("pineapple", 1)
+
+    print(total_units(my_list))
+Sample output
+16
+"""
+
 # DO NOT CHANGE THE CODE OF THE CLASS
-# ShoppingList. Write yous solution under it!
+# ShoppingList. Write your solution under it!
 class ShoppingList:
     def __init__(self):
         self.products = []
@@ -19,3 +35,26 @@ class ShoppingList:
 # -------------------------
 # Write your solution here:
 # -------------------------
+    # In Class #
+    def total_units(self):
+        total = 0
+        for item in self.products:
+            total += item[1]
+        return total
+    
+# Out of Class #
+def total_units(my_list: ShoppingList):
+    total = 0
+    for product in my_list.products:
+        total += product[1]
+    return total
+
+
+# Test #
+if __name__ == '__main__':
+    my_list = ShoppingList()
+    my_list.add("bananas", 10)
+    my_list.add("apples", 5)
+    my_list.add("pineapple", 1)
+
+    print(total_units(my_list))
