@@ -1,0 +1,178 @@
+At Unicafe, the student cafeteria at the University of Helsinki, students can pay for their lunch with a special debit card.
+
+In this exercise you will write a class called LunchCard, with the purpose of emulating the functions provided by the cafeteria's debit card.
+
+The structure of the new class
+Please create a new class named LunchCard.
+
+First write the constructor for the class. It should take the initial balance available on the card as an argument, and save it as an attribute. This is provided for you in the skeleton below.
+
+Next, write a __str__ method, which returns a string containing the balance: "The balance is X euros". The available balance should be printed out with one decimal place precision. Please see the example below for usage.
+
+Here is a skeleton implementation for the class:
+
+class LunchCard:
+    def __init__(self, balance: float):
+        self.balance = balance
+
+    def __str__(self):
+        pass
+A usage example:
+
+card = LunchCard(50)
+print(card)
+Executing the above should produce the following printout:
+
+Sample output
+The balance is 50.0 euros
+
+Paying for lunch
+Please implement the following methods in your LunchCard class:
+
+eat_lunch subtracts 2.60 euros from the balance on the card
+eat_special subtracts 4.60 euros from the balance on the card
+You can use the following main function to test your class:
+
+card = LunchCard(50)
+print(card)
+
+card.eat_lunch()
+print(card)
+
+card.eat_special()
+card.eat_lunch()
+print(card)
+This should produce the following printout:
+
+Sample output
+The balance is 50.0 euros
+The balance is 47.4 euros
+The balance is 40.2 euros
+
+Make sure the balance is never allowed to reach numbers below zero:
+
+card = LunchCard(4)
+print(card)
+
+card.eat_lunch()
+print(card)
+
+card.eat_lunch()
+print(card)
+Sample output
+The balance is 4.0 euros
+The balance is 1.4 euros
+The balance is 1.4 euros
+
+If there is not enough money on the card to pay for the lunch, the price of the lunch should not be subtracted from the balance.
+
+Depositing money on the card
+Implement the deposit_money method in your LunchCard class.
+
+The method increases the balance on the card by the amount given as an argument.
+
+card = LunchCard(10)
+print(card)
+card.deposit_money(15)
+print(card)
+card.deposit_money(10)
+print(card)
+card.deposit_money(200)
+print(card)
+Sample output
+The balance is 10.0 euros
+The balance is 25.0 euros
+The balance is 35.0 euros
+The balance is 235.0 euros
+
+The method should account for arguments below zero by raising an exception of type ValueError:
+
+card = LunchCard(10)
+card.deposit_money(-10)
+Sample output
+File "testi.py", line 3, in lunchcard
+ValueError: You cannot deposit an amount of money less than zero
+
+NB: this method should raise an exception. Please see the instructions for raising exceptions in part 6. Under no circumstances should the method itself print out anything - the example above is a printout from the Python interpreter coming across the exception.
+
+Multiple cards
+Please write a main function which contains the following sequence of events:
+
+Create a lunch card for Peter. The initial balance on the card is 20 euros.
+Create a lunch card for Grace. The initial balance on the card is 30 euros.
+Peter eats a special
+Grace eats a regular lunch
+Print out the balance on each card (on separate lines, with the name of the owner at the beginning of the line)
+Peter deposits 20 euros
+Grace eats the special
+Print out the balance on each card (on separate lines, with the name of the owner at the beginning of the line)
+Peter eats a regular lunch
+Peter eats a regular lunch
+Grace deposits 50 euros
+Print out the balance on each card (on separate lines, with the name of the owner at the beginning of the line)
+Body of the main program
+
+peters_card = LunchCard(20)
+graces_card = LunchCard(30)
+# the rest of your main function
+Your main function should print out exactly the following:
+
+Sample output
+Peter: The balance is 15.4 euros
+Grace: The balance is 27.4 euros
+Peter: The balance is 35.4 euros
+Grace: The balance is 22.8 euros
+Peter: The balance is 30.2 euros
+Grace: The balance is 72.8 euros
+
+Example 2: Task list
+The following class TaskList models a list of tasks:
+
+class TaskList:
+    def __init__(self):
+        self.tasks = []
+
+    def add_task(self, name: str, priority: int):
+        self.tasks.append((priority, name))
+
+    def get_next(self):
+        self.tasks.sort()
+        # The list method pop removes and returns the last item in a list
+        task = self.tasks.pop()
+        # Return the name of the task (the second item in the tuple)
+        return task[1]
+
+    def number_of_tasks(self):
+        return len(self.tasks)
+
+    def clear_tasks(self):
+        self.tasks = []
+The method add_task adds a new task to the list. Each task also has a priority attached, which is used for sorting the tasks. The method get_next removes and returns the task with the highest priority on the list. There is also the number_of_tasks method, which returns the number of tasks on the list, and finally the method clear_tasks, which clears the task list.
+
+Within the object, the tasks are stored in a list. Each task is of a tuple containing the priority of the task and its name. The priority value is stored first, so that when the list is sorted, the task with the highest priority is the last item on the list. This is why we can then simply use the pop method to retrieve and remove the highest priority item.
+
+Please have a look at the following program with the task list in action:
+
+tasks = TaskList()
+tasks.add_task("studying", 50)
+tasks.add_task("exercise", 60)
+tasks.add_task("cleaning", 10)
+print(tasks.number_of_tasks())
+print(tasks.get_next())
+print(tasks.number_of_tasks())
+tasks.add_task("date", 100)
+print(tasks.number_of_tasks())
+print(tasks.get_next())
+print(tasks.get_next())
+print(tasks.number_of_tasks())
+tasks.clear_tasks()
+print(tasks.number_of_tasks())
+Sample output
+3
+exercise
+2
+3
+date
+studying
+1
+0
