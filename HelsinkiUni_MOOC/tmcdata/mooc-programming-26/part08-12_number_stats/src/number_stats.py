@@ -1,5 +1,5 @@
 # Write your solution here!
-class  NumberStats:
+class NumberStats:
     def __init__(self):
         self.numbers = 0
         self.sum = 0
@@ -27,10 +27,10 @@ stats = NumberStats()
 even_numbers = NumberStats()
 odd_numbers = NumberStats()
 
-print('Type in your Numbers:\n')
+print("Please type in integer numbers:")
 
 while True:
-    number = int(input('Enter a Number: '))
+    number = int(input())
 
     if number == -1:
         break
@@ -40,7 +40,7 @@ while True:
     else:
         odd_numbers.add_number(number)
 
-print(f'Sum of Numbers: {stats.get_sum()}')
-print(f'Mean of Numbers: {stats.average()}')
-print(f'Sum of even numbers: {even_numbers.get_sum()}')
-print(f'Sum of odd numbers: {odd_numbers.get_sum()}')
+print(f"Sum of numbers: {stats.get_sum()}")
+print(f"Mean of numbers: {stats.average()}")
+print(f"Sum of even numbers: {even_numbers.get_sum()}")
+print(f"Sum of odd numbers: {odd_numbers.get_sum()}")

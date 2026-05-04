@@ -1,11 +1,8 @@
-# Write your solution here:
-import time
-
 class Clock:
-    def __init__(self):
-        self.hour = 0
-        self.minute = 0
-        self.second = 0
+    def __init__(self, hour: int, minute: int, second: int):
+        self.hour = hour
+        self.minute = minute
+        self.second = second
 
     def tick(self):
         if self.second < 59:
@@ -21,19 +18,10 @@ class Clock:
                 else:
                     self.hour = 0
 
-    def set(self, hour, minute, second):
+    def set(self, hour: int, minute: int):
         self.hour = hour
         self.minute = minute
-        self.second = second
+        self.second = 0
 
-   
     def __str__(self):
-        return(f'{self.hour:02}:{self.minute:02}:{self.second:02}')
-
-clock = Clock()
-clock.set(14,52,38)
-while True:
-    clock.tick()
-    print(clock)
-    # time.sleep(1)
-    break
+        return f'{self.hour:02}:{self.minute:02}:{self.second:02}'

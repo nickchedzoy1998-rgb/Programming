@@ -20,9 +20,4 @@ def books_of_genre(books: list, genre: str):
         if book.genre == genre:
             matching_books.append(book)
 
-    if matching_books:
-        print(f'Books in the {genre} genre:')
-        for match in matching_books:
-            print(match.__repr__())
-    else:
-        print(f'There are no books in the {genre} genre')
+    return matching_books
