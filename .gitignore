@@ -1,7 +1,0 @@
-# MOOC exercises: keep only Python/text files inside src folders.
-/HelsinkiUni_MOOC/tmcdata/mooc-programming-26/**
-!/HelsinkiUni_MOOC/tmcdata/mooc-programming-26/**/
-!/HelsinkiUni_MOOC/tmcdata/mooc-programming-26/**/src/
-!/HelsinkiUni_MOOC/tmcdata/mooc-programming-26/**/src/**/
-!/HelsinkiUni_MOOC/tmcdata/mooc-programming-26/**/src/**/*.py
-!/HelsinkiUni_MOOC/tmcdata/mooc-programming-26/**/src/**/*.txt
