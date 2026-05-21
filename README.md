@@ -1,12 +1,11 @@
 # Programming Repository
 
-A curated collection of Python practice projects, algorithm notebooks, and Helsinki University MOOC exercises.
+A concise public portfolio of Python projects, algorithm practice, and Helsinki University MOOC solutions showcasing object-oriented design, problem solving, and algorithm development.
 
 ## Repository Overview
 
-This repository contains three main areas:
+This repository contains these main areas:
 
-- `file_copier.py`: a root-level utility to copy completed Helsinki MOOC exercises from the TMC source data into the organized `HelsinkiUni_MOOC/Advanced Programming` workspace.
 - `HelsinkiUni_MOOC`: a large set of learning exercises from the Helsinki University programming MOOC, including solution files for Part 08 and Part 09 and the original `tmcdata` source/test scaffolding.
 - `Leetcode`: Python solutions and notebooks for common LeetCode problems, organized by difficulty tier.
 
