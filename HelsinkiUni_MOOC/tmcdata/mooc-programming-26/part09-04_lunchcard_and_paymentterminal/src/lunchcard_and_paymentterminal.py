@@ -49,7 +49,7 @@ class PaymentTerminal:
         If the payment passed as an argument is not large enough to cover the price,
         the lunch is not sold, and the entire sum is returned.
         """
-        price = 2.5
+        price = 4.30
         if payment >= price:
             self.funds += payment
             change = payment - price

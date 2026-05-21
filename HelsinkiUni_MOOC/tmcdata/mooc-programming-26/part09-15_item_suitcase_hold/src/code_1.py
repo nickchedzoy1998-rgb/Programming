@@ -7,12 +7,10 @@ class Item:
 
     def __str__(self):
         return f'{self.__name} ({self.__weight} kg)'
-    
-    @property
+
     def name(self):
         return self.__name
-    
-    @property
+
     def weight(self):
         return self.__weight
 
@@ -23,11 +21,11 @@ class Suitcase:
         self.items = []
 
     def add_item(self, item:Item):
-        if (self.max_weight - self.combined_weight() - item.weight) >= 0:
+        if self.weight() + item.weight() <= self.max_weight:
             self.items.append(item)
 
     def __str__(self):
-        item_weights = self.combined_weight()
+        item_weights = self.weight()
         if len(self.items) == 1:
             item_string = 'item'
         else:
@@ -37,21 +35,16 @@ class Suitcase:
     
     def print_items(self):
         for item in self.items:
-            return item.__str___()
-        
-    def combined_weight(self):
-        return sum(item.weight for item in self.items)
+            print(item)
+
+    def weight(self):
+        return sum(item.weight() for item in self.items)
     
     def heaviest_item(self):
-        i = None
-        heaviest_weight = 0
+        if len(self.items) == 0:
+            return None
 
-        for item in self.items:
-            if item.weight > heaviest_weight:
-                i = item
-                heaviest_weight = item.weight()
-
-        return i.__str__()
+        return max(self.items, key=lambda item: item.weight())
     
 
 class CargoHold:
@@ -60,12 +53,13 @@ class CargoHold:
         self.cases = []
 
     def add_suitcase(self, suitcase:Suitcase):
-        if (self.max_weight - suitcase.combined_weight() - sum(s.combined_weight() for s in self.cases)) >= 0:
+        if suitcase.weight() + sum(s.weight() for s in self.cases) <= self.max_weight:
             self.cases.append(suitcase)
 
     def __str__(self):
-        y = self.max_weight - (sum(sc.combined_weight() for sc in self.cases))
-        return f'{len(self.cases)} suitcases, space for {y} kg'
+        y = self.max_weight - sum(sc.weight() for sc in self.cases)
+        suitcase_string = 'suitcase' if len(self.cases) == 1 else 'suitcases'
+        return f'{len(self.cases)} {suitcase_string}, space for {y} kg'
     
     def print_items(self):
         for case in self.cases:

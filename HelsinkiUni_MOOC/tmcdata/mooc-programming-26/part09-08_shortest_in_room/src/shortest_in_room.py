@@ -26,8 +26,7 @@ class Room:
     def shortest(self):
         if self.people:
             shortest = min(self.people, key = lambda p: p.height)
-            return shortest.name
-        else: return None
+            return shortest
 
     def remove_shortest(self):
         if self.people:

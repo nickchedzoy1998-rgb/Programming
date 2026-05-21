@@ -2,6 +2,7 @@
 
 class Recording:
     def __init__(self, __length: int):
+        if __length < 0: raise ValueError
         self.__length = __length
 
     @property
@@ -10,6 +11,7 @@ class Recording:
     
     @length.setter
     def length(self, length):
+        if length < 0: raise ValueError
         self.__length = length
 
 

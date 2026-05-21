@@ -31,4 +31,4 @@ def extract_save(part_no: str, additional_string: str):
 
             
 if __name__ == '__main__':
-    return None
+    pass
