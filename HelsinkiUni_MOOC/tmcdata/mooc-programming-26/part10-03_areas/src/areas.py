@@ -9,3 +9,14 @@ class Rectangle:
 
     def area(self):
         return self.width * self.height
+
+class Square(Rectangle):
+    def __init__(self, side: int):
+        self.width = side
+        self.height = side
+
+
+if __name__ == '__main__':
+    square = Square(4)
+    print(square)
+    print("area:", square.area())
