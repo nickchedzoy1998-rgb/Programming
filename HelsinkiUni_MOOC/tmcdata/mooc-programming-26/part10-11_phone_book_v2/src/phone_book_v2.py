@@ -1,13 +1,41 @@
-
 # Write your solution here:
+class Person:
+    def __init__(self, name: str):
+        self.__name = name
+        self.__numbers = []
+        self.__address = None
+
+    def add_number(self, number):
+        self.__numbers.append(number)
+
+    def add_address(self, address):
+        self.__address = address
+
+    def name(self):
+        return self.__name
+
+    def numbers(self):
+        return self.__numbers
+    
+    def address(self):
+        return self.__address
+
+    
 class PhoneBook:
     def __init__(self):
         self.__persons = {}
 
-    def add_number(self, name: str, number: str):
+    def add_number(self, name, number):
         if not name in self.__persons:
-            self.__persons[name] = []
-        self.__persons[name].append(number)
+            self.__persons[name] = Person(name)
+        
+        self.__persons[name].add_number(number)
+
+    def add_address(self, name, address):
+        if not name in self.__persons:
+            self.__persons[name] = Person(name)
+        
+        self.__persons[name].add_address(address)
 
     def get_entry(self, name: str):
         if not name in self.__persons:
@@ -15,7 +43,7 @@ class PhoneBook:
         return self.__persons[name]
 
     def all_entries(self):
-        return self.__persons
+        return [person.name() for person in self.__persons]
 
 class PhoneBookApplication:
     def __init__(self):
@@ -26,6 +54,7 @@ class PhoneBookApplication:
         print("0 exit")
         print("1 add number")
         print("2 search")
+        print("3 add address")
 
     def add_number(self):
         name = input("name: ")
@@ -34,12 +63,29 @@ class PhoneBookApplication:
 
     def search(self):
         name = input("name: ")
-        numbers = self.__phonebook.get_entry(name)
-        if numbers == None:
+        entry = self.__phonebook.get_entry(name)
+        if entry is None:
+            print("number unknown")
+            print("address unknown")
+            return
+
+        numbers = entry.numbers()
+        address = entry.address()
+        if len(numbers) == 0:
             print("number unknown") 
             return 
         for number in numbers:
-            print(number)       
+            print(number)
+
+        if address == None:
+            print("address unknown") 
+            return 
+        print(address)
+
+    def add_address(self):
+        name = input("name: ")
+        address = input('address: ')
+        self.__phonebook.add_address(name, address)
 
     def execute(self):
         self.help()
@@ -52,10 +98,18 @@ class PhoneBookApplication:
                 self.add_number()
             elif command == "2":
                 self.search()
+            elif command == '3':
+                self.add_address()
             else:
                 self.help()
 
 
 # when testing, no code should be outside application except the following:
-application = PhoneBookApplication()
-application.execute()
+if __name__ == '__main__':
+
+    application = PhoneBookApplication()
+    application.execute()
+    # phonebook = PhoneBook()
+    # phonebook.add_number("Eric", "02-123456")
+    # print(phonebook.get_entry("Eric"))
+    # print(phonebook.get_entry("Emily"))
