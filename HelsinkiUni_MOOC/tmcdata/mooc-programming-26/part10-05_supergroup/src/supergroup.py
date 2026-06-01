@@ -9,34 +9,34 @@ class SuperHero:
     
 class SuperGroup:
     def __init__(self, name: str, location: str):
-        self.__name = name
-        self.__location = location
-        self.__members = []
+        self._name = name
+        self._location = location
+        self._members = []
 
     @property
     def name(self):
-        return self.__name
+        return self._name
     
     @property
     def location(self):
-        return self.__location
+        return self._location
     
     @name.setter
     def name(self, name:str):
-        self.__name = name
+        self._name = name
 
     @location.setter
     def location(self, location:str):
-        self.__location = location
+        self._location = location
 
     def add_member(self, hero: SuperHero):
-        self.__members.append(hero)
+        self._members.append(hero)
 
     def print_group(self):
-        print(self.name, self.location)
+        print(f"{self.name}, {self.location}")
         print('Members:')
-        for member in self.__members:
-            print(member.__str__())
+        for member in self._members:
+            print(member)
 
 
 if __name__ == '__main__':

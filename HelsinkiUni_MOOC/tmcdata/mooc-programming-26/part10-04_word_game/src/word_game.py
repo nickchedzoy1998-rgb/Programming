@@ -59,7 +59,7 @@ class MostVowels(WordGame):
             if char in vowels:
                 p1_vowels +=1
 
-        for char in player1_word:
+        for char in player2_word:
             if char in vowels:
                 p2_vowels +=1
         
@@ -114,6 +114,3 @@ if __name__ == '__main__':
 
 
 
-if __name__ == '__main__':
-    p = LongestWord(3)
-    p.play()

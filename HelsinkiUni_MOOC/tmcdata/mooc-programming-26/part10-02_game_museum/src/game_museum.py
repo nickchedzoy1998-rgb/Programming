@@ -18,13 +18,8 @@ class GameMuseum(GameWarehouse):
     def __init__(self):
         super().__init__()
 
-    def add_game(self, game: ComputerGame):
-        if game.year > 1990:
-            return
-        
-        else:
-            return super().add_game(game)
-        
+    def list_games(self):
+        return [game for game in super().list_games() if game.year < 1990]
 
 if __name__ == '__main__':
     museum = GameMuseum()
