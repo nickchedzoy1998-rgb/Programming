@@ -71,16 +71,17 @@ class PhoneBookApplication:
 
         numbers = entry.numbers()
         address = entry.address()
+        
         if len(numbers) == 0:
             print("number unknown") 
-            return 
-        for number in numbers:
-            print(number)
+        else:
+            for number in numbers:
+                print(number)
 
         if address == None:
             print("address unknown") 
-            return 
-        print(address)
+        else:
+            print(address)
 
     def add_address(self):
         name = input("name: ")
@@ -104,12 +105,7 @@ class PhoneBookApplication:
                 self.help()
 
 
-# when testing, no code should be outside application except the following:
-if __name__ == '__main__':
 
-    application = PhoneBookApplication()
-    application.execute()
-    # phonebook = PhoneBook()
-    # phonebook.add_number("Eric", "02-123456")
-    # print(phonebook.get_entry("Eric"))
-    # print(phonebook.get_entry("Emily"))
+# when testing, no code should be outside application except the following:
+application = PhoneBookApplication()
+application.execute()

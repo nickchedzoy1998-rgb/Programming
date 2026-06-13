@@ -102,7 +102,5 @@ class CourseRecordsApplication:
                 self.help()
 
 
-if __name__ == '__main__':
-
-    application = CourseRecordsApplication()
-    application.execute()
+application = CourseRecordsApplication()
+application.execute()

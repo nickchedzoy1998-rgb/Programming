@@ -105,7 +105,9 @@ class PhoneBookApplication:
             else:
                 self.help()
 
+
+
 # when you run the tests, nothing apart from these two lines should be placed in the main function, outside any class definitions 
-if __name__ == '__main__':
-    application = PhoneBookApplication()
-    application.execute()
+application = PhoneBookApplication()
+application.execute()
+

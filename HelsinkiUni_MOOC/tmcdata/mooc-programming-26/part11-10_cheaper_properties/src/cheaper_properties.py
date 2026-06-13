@@ -24,7 +24,6 @@ class RealProperty:
 # WRITE YOUR SOLUTION HERE:
 def cheaper_properties(properties: list, reference: RealProperty) -> list:
     "Return list of tuples [(property, price_diff), ...]"
-
     return [(property, property.price_difference(reference)) for property in properties if not property.more_expensive(reference) and property.price_difference(reference) != 0]
 
 if __name__ == '__main__':

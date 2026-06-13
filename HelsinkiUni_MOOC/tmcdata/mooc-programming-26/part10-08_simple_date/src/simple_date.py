@@ -46,49 +46,24 @@ class SimpleDate:
     
 
     def __add__(self, days):
-        if self.day + days < 31:
-            return SimpleDate(self.day+days, self.month, self.year)
+        new_day = self.day + days
+        new_month = self.month
+        new_year = self.year
         
-        else:
-            days_to_end_month = 30 - self.day
-            days_to_end_year = ((12 - (self.month + 1)) * 30) + days_to_end_month
-
-            if days <= days_to_end_year:
-                # 7.8.2024 Add 65
-                month = self.month + 1
-                days -= days_to_end_month
-
-                if days < 30:
-                    return SimpleDate(days, month, self.year)
-                
-                else:
-                    date = days % 30
-                    month = ((days - date) / 30) + self.month
-
-                    return SimpleDate(date, month, self.year)
-                
-            else:
-                if days < days_to_end_year + (12 * 30):
-                    year = self.year + 1
-                    days_rem = days - days_to_end_year
-                    if days_rem < 31:
-                        return SimpleDate(days_rem, 1, year)
-                    
-                    else:
-                        year = self.year + 1
-                        date = days_rem % 30
-                        month =  1 + ((days_rem - date) / 30)
-
-                        return SimpleDate(date, month, year)
-                
-                else:
-                    year = self.year + 1
-                    days_rem = days - days_to_end_year
-                    date = days_rem % 30
-                    month = (((days_rem - date) / 30) % 12)
-                    year = year + ((((days_rem - date) / 30)-month) / 12)
-
-                    return SimpleDate(date, month, year)
+        while new_day > 30:
+            new_day -= 30
+            new_month += 1
+        
+        while new_month > 12:
+            new_month -= 12
+            new_year += 1
+        
+        return SimpleDate(new_day, new_month, new_year)
+    
+    def __sub__(self, other):
+        tv1 = self.year * 360 + self.month * 30 + self.day
+        tv2 = other.year * 360 + other.month * 30 + other.day
+        return abs(tv1 - tv2)
 
 
 

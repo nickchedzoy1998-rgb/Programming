@@ -1,4 +1,10 @@
-# WRITE YOUR SOLUTION HERE:
+### Bosses and subordinates
+
+Points: 1
+
+The class `Employee` models an employee of a company:
+
+```python
 class Employee:
     def __init__(self, name: str):
         self.name = name
@@ -6,20 +12,14 @@ class Employee:
 
     def add_subordinate(self, employee: 'Employee'):
         self.subordinates.append(employee)
+```
 
+Please write a function named `count_subordinates(employee: Employee)` which recursively counts the number of subordinates each employee has.
 
-def count_subordinates(employee: Employee):
-    count = 0
+An example of the function in action:
 
-    for s in employee.subordinates:
-        count += 1
-        count += count_subordinates(s)
-
-    return count
-
-
-
-if __name__ == '__main__':
+```python
+if __name__ == "__main__":
     t1 = Employee("Sally")
     t2 = Employee("Eric")
     t3 = Employee("Matthew")
@@ -31,7 +31,15 @@ if __name__ == '__main__':
     t4.add_subordinate(t2)
     t4.add_subordinate(t3)
     t4.add_subordinate(t5)
-
     print(count_subordinates(t1))
     print(count_subordinates(t4))
     print(count_subordinates(t5))
+```
+
+Sample output:
+
+```
+5
+3
+0
+```

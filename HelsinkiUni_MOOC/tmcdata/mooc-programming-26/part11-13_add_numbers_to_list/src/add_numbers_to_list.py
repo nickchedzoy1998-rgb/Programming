@@ -1,7 +1,7 @@
 # WRITE YOUR SOLUTION HERE:
 def add_numbers_to_list(numbers: list) -> list:
     if len(numbers) %5 == 0:
-        return numbers
+        return
     
     numbers.append(numbers[-1]+1)
 
