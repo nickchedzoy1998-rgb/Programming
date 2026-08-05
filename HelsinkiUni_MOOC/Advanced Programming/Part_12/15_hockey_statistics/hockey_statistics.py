@@ -116,7 +116,7 @@ class SearchListApplication:
                     print(self.format_player(p))
 
 
-
-file_input = input("file name: ")
-app = SearchListApplication(file_input)
-app.execute()
+if __name__ == "__main__":
+    file_input = input("file name: ")
+    app = SearchListApplication(file_input)
+    app.execute()
