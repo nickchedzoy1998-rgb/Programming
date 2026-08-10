@@ -1,6 +1,5 @@
 file_copier.py
-HelsinkiUni_MOOC/tmcdata/mooc-programming-26/part10-10_phone_book_v1/phonebook.txt
-HelsinkiUni_MOOC/tmcdata/mooc-programming-26/part10-10_phone_book_v1/src/phonebook.txt
+/HelsinkiUni_MOOC/tmcdata/
 
 # Python cache files
 __pycache__/
@@ -8,5 +7,3 @@ __pycache__/
 
 # Init files
 *init*
-HelsinkiUni_MOOC/tmcdata/mooc-programming-26/part10-10_phone_book_v1/tmc/utils.py
-HelsinkiUni_MOOC/tmcdata/mooc-programming-26/part10-10_phone_book_v1/tmc/utils.py

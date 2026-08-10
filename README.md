@@ -1,49 +1,48 @@
-# Programming Repository
+# Python Programming Portfolio
 
-A concise public portfolio of Python projects, algorithm practice, and Helsinki University MOOC solutions showcasing object-oriented design, problem solving, and algorithm development.
+This repository documents my progress as a Python developer through structured coursework and algorithm practice. It is both a learning record and a public portfolio: each exercise includes its brief alongside the solution so that the problem, approach, and result can be reviewed together.
 
-## Repository Overview
+## Repository at a Glance
 
-This repository contains these main areas:
+| Collection | Contents | Current coverage |
+|---|---|---|
+| [Advanced Programming - Helsinki_Uni](<Advanced Programming - Helsinki_Uni/README.md>) | University of Helsinki Advanced Course in Programming exercises | 77 exercises across Parts 8–12 |
+| [LeetCode](Leetcode/README.md) | Python algorithm and data-structure practice | 21 problems across two learning tiers |
 
-- `HelsinkiUni_MOOC`: a large set of learning exercises from the Helsinki University programming MOOC, including solution files for Part 08 and Part 09 and the original `tmcdata` source/test scaffolding.
-- `Leetcode`: Python solutions and notebooks for common LeetCode problems, organized by difficulty tier.
+The University of Helsinki course is an ongoing learning goal. This repository currently presents the completed and curated work from Parts 8–12; it does not claim completion of the full course or certification.
 
-## Top 5 Highlights
+## Highlights
 
-1. `HelsinkiUni_MOOC/Advanced Programming/Part_09/15_item_suitcase_hold/code_1.py`
-   - Implements `Item`, `Suitcase`, and `CargoHold` classes with weight tracking and load limits.
-   - Strong example of object-oriented modeling, method encapsulation, and aggregation of nested objects.
+### [Order Book Application](<Advanced Programming - Helsinki_Uni/Part_11/19_order_book_application/order_book_application.py>)
 
-2. `HelsinkiUni_MOOC/Advanced Programming/Part_09/04_lunchcard_and_paymentterminal/lunchcard_and_paymentterminal.py`
-   - Implements `LunchCard` and `PaymentTerminal` classes with deposit, payment, and terminal-funds tracking behavior.
-   - Useful for understanding object-oriented design, method contracts, and domain modeling.
+A command-line task-management application built around `Task`, `OrderBook`, and application-layer classes. It models task state, programmer workloads, validation, reporting, and user commands. This showcases object-oriented decomposition, encapsulated state, collection querying, exception handling, and building a complete program from a domain model.
 
-3. `HelsinkiUni_MOOC/Advanced Programming/Part_08/16_series/series.py`
-   - A clean object-oriented exercise defining the `Series` class with rating, average score, and filtering functions.
-   - Demonstrates list processing and simple validation logic.
+### [Hockey Statistics Explorer](<Advanced Programming - Helsinki_Uni/Part_12/15_hockey_statistics/hockey_statistics.py>)
 
-4. `Leetcode/Tier 1/1 - two_sum/two_sum.ipynb`
-   - A classic introductory algorithm notebook solving the Two Sum problem.
-   - Includes iterative submissions and example cases for correctness.
+A JSON-backed search and reporting application that loads player data, filters by team or nationality, and ranks players using multi-field sort rules. This demonstrates file handling, structured-data processing, path-safe I/O, comprehensions, sorting with compound keys, formatted output, and separation between data and interface logic.
 
-5. `Leetcode/Tier 2/934 - Shortest Bridge/`
-   - A more advanced LeetCode problem exploring graph traversal and island connectivity.
-   - Adds depth to the repository by showing transition from Tier 1 basics to Tier 2 algorithmic challenges.
+### [Shortest Bridge](<Leetcode/Tier 2/934 - Shortest Bridge/Solution.ipynb>)
 
-## Folder Structure
+A graph-traversal solution that identifies one island and then expands outward with breadth-first search until it reaches the second. It showcases grid modelling, depth/breadth-first traversal, queue-based level processing, visited-state marking, and reasoning about shortest paths.
 
-### `HelsinkiUni_MOOC`
+### [Maximize Target Nodes After Connecting Trees](<Leetcode/Tier 2/3372 - Maximize No. of Target Nodes After Connecting Trees/solution.ipynb>)
 
-- `Advanced Programming/Part_08` and `Advanced Programming/Part_09`
-  - Contains completed solution scripts for MOOC exercises such as `series.py`, `lunchcard.py`, `pet.py`, `service_charge.py`, and others.
-- `tmcdata/mooc-programming-26`
-  - Contains exercise source directories, test scaffolding, and TMC runner files used by the course.
-  - Useful for seeing how the assignments are packaged and how automated tests are organized.
+A tree problem solved with adjacency lists and bounded breadth-first searches across two independent graphs. It demonstrates graph construction, distance-limited traversal, decomposition into reusable helpers, and combining independently computed results.
 
-### `Leetcode`
+## Skills Demonstrated
 
-- `Tier 1`
-  - Contains beginner-level LeetCode challenges, including classic problems like `two_sum`, `roman_to_integer`, `valid_parenthesis`, and array/string puzzles.
-- `Tier 2`
-  - Contains more advanced problems such as `934 - Shortest Bridge` and `3372 - Maximize No. of Target Nodes After Connecting Trees`.
+- Python fundamentals, clean functions, comprehensions, generators, and type hints
+- Object-oriented design, inheritance, encapsulation, composition, and application structure
+- Algorithms and data structures: arrays, strings, stacks, hash maps, trees, graphs, DFS, BFS, and recursion
+- Data processing with text and JSON files, filtering, aggregation, sorting, and regular expressions
+- Problem decomposition, iterative optimisation, testing examples, and documenting technical work
+
+## Learning Goals
+
+- Complete the remaining University of Helsinki Advanced Course in Programming material
+- Continue progressing from foundational LeetCode exercises to more complex graph, tree, and optimisation problems
+- Refine solutions and documentation as my engineering knowledge develops
+
+## Repository Notes
+
+This public view intentionally contains only curated solutions and supporting descriptions. Course-runner data, generated caches, and local utility scripts are excluded from version control so the repository remains easy to navigate.

@@ -1,0 +1,20 @@
+# Three Classes
+
+## Exercise Brief
+
+Please write the three classes specified below. Each class should have exactly the same names and types of attributes as listed.
+
+Please also include a constructor in each class. The constructor should take the initial values of the attributes as its arguments, in the order listed below.
+
+Class Checklist
+attribute header (string)
+attribute entries (list)
+Class Customer
+attribute id (string)
+attribute balance (float)
+attribute discount (integer)
+Class Cable
+attribute model (string)
+attribute length (float)
+attribute max_speed (integer)
+attribute bidirectional (Boolean)
