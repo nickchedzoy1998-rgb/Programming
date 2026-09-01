@@ -1,0 +1,7 @@
+# List Years
+
+## Exercise Brief
+
+Please write a function named list_years(dates: list) which takes a list of date type objects as its argument. 
+The function should return a new list, which contains the years in the original list in chronological order, 
+from earliest to latest.
