@@ -1,0 +1,4 @@
+-- SQL Session 02: Write your query below.
+-- The table dated_transactions is created automatically by run.py.
+-- Goal: return the latest transaction for each customer.
+-- Do not edit setup.sql.
