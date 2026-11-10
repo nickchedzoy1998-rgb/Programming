@@ -6,10 +6,20 @@ A compact workspace for practising independent problem-solving in Python, SQL, a
 
 | Session | Focus | Status |
 | --- | --- | --- |
-| 1 | SQL: joins, aggregation, CTEs, window functions and correctness checks | Not started |
+| 1 | SQL: joins, aggregation, CTEs, window functions and correctness checks | In progress |
 | 2 | Python algorithms: timed unfamiliar problems, complexity and edge cases | Not started |
 | 3 | Practical engineering: validation, transformations, testing and rerun safety | Not started |
 | 4 | Mock technical interview: an unseen task, follow-up requirements and review | Not started |
+
+## Start here
+
+**[SQL Session 01](sql/session_01/README.md)**
+
+- Edit `sql/session_01/work.sql` to write your query.
+- `sql/session_01/setup.sql` contains the example tables and data (do not edit).
+- Run: `python practice/sql/session_01/run.py` from the repository root.
+
+Only `work.sql` needs to be edited for this exercise. A new SQLite database is created in memory on each run.
 
 ## Working approach
 
@@ -19,22 +29,4 @@ A compact workspace for practising independent problem-solving in Python, SQL, a
 4. Explain the approach, trade-offs and failure modes.
 5. Review mistakes and revisit weak concepts with a fresh exercise.
 
-## Exercise structure
-
-```text
-practice/
-  README.md
-  sql/
-  algorithms/
-  practical/
-  mock/
-```
-
-Exercise files will be added as needed to avoid revealing solutions prematurely.
-
-## Session outcomes
-
-- SQL: Not assessed.
-- Algorithms: Not assessed.
-- Practical engineering: Not assessed.
-- Mock: Not assessed.
+Future exercises will be added as needed. Content and commits remain company-neutral.
