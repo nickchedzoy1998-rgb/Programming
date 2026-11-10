@@ -1,0 +1,3 @@
+-- SQL exercise 03.
+-- Write your SELECT query below.
+-- The table market_observations is created by run.py.

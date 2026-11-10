@@ -13,7 +13,7 @@ A compact workspace for practising independent problem-solving in Python, SQL, a
 
 ## Start here
 
-**SQL exercises:** [Session 01 — transactions and refunds](sql/session_01/README.md) · [Session 02 — latest transaction per customer](sql/session_02/README.md)
+**SQL exercises:** [Session 01 — transactions and refunds](sql/session_01/README.md) · [Session 02 — latest transaction per customer](sql/session_02/README.md) · [Session 03 — latest valid market observation](sql/session_03/README.md)
 
 - Edit `sql/session_01/work.sql` to write your query.
 - `sql/session_01/setup.sql` contains the example tables and data (do not edit).
