@@ -1,1 +1,0 @@
--- Write your SQL solution here, then run: python practice/sql/run_query.py
