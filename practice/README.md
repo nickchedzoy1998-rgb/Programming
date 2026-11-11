@@ -6,12 +6,16 @@ A compact workspace for practising independent problem-solving in Python, SQL, a
 
 | Session | Focus | Status |
 | --- | --- | --- |
-| 1 | SQL: joins, aggregation, CTEs, window functions and correctness checks | In progress |
-| 2 | Python algorithms: timed unfamiliar problems, complexity and edge cases | Not started |
+| 1 | SQL: joins, aggregation, CTEs, window functions and correctness checks | Reviewed; revisit briefly |
+| 2 | Python algorithms: timed unfamiliar problems, complexity and edge cases | In progress |
 | 3 | Practical engineering: validation, transformations, testing and rerun safety | Not started |
 | 4 | Mock technical interview: an unseen task, follow-up requirements and review | Not started |
 
 ## Start here
+
+**[Python algorithm exercise 01](algorithms/session_01/README.md)** — Edit `algorithms/session_01/solution.py`, then run `python practice/algorithms/session_01/run.py`.
+
+### Previous SQL practice
 
 **SQL exercises:** [Session 01 — transactions and refunds](sql/session_01/README.md) · [Session 02 — latest transaction per customer](sql/session_02/README.md) · [Session 03 — latest valid market observation](sql/session_03/README.md)
 
