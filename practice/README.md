@@ -8,7 +8,7 @@ A compact workspace for practising independent problem-solving in Python, SQL, a
 | --- | --- | --- |
 | 1 | SQL: joins, aggregation, CTEs, window functions and correctness checks | Reviewed; revisit briefly |
 | 2 | Python algorithms: timed unfamiliar problems, complexity and edge cases | Reviewed; revisit if time |
-| 3 | Practical engineering: validation, transformations, testing and rerun safety | In progress |
+| 3 | Practical engineering: validation, transformations, testing and rerun safety | Completed (introductory scope) |
 | 4 | Mock technical interview: an unseen task, follow-up requirements and review | Not started |
 
 ## Start here
