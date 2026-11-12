@@ -15,6 +15,8 @@ A compact workspace for practising independent problem-solving in Python, SQL, a
 
 **[Python algorithm exercise 01](algorithms/session_01/README.md)** — Edit `algorithms/session_01/solution.py`, then run `python practice/algorithms/session_01/run.py`.
 
+**[Python algorithm exercise 02](algorithms/session_02/README.md)** — Edit `algorithms/session_02/solution.py`, then run `python practice/algorithms/session_02/run.py`.
+
 ### Previous SQL practice
 
 **SQL exercises:** [Session 01 — transactions and refunds](sql/session_01/README.md) · [Session 02 — latest transaction per customer](sql/session_02/README.md) · [Session 03 — latest valid market observation](sql/session_03/README.md)
