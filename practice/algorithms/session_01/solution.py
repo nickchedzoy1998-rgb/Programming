@@ -9,33 +9,30 @@ def longest_unique_substring(text: str) -> int:
         return text_length
     
     longest_substring = 1
-    repeated = False
     skip_to_index = 0
 
     for i, char in enumerate(text):
+        substring = {}
         repeated = False
-        length_sub = 1
-        letters = [char]
-        next_letter_index = i
 
-        letter_index = {}
+        if i < skip_to_index:
+            continue
 
-        while repeated == False and next_letter_index <= text_length-2:
-            next_letter_index += 1
+        substring[char] = i
+        next = i
 
-            if text[next_letter_index] not in letters:
-                length_sub += 1
-                letters.append(text[next_letter_index])
+        while repeated == False and next <= text_length-2:
+            next += 1
 
-                if length_sub > longest_substring:
-                    longest_substring = length_sub
+            if text[next] not in substring.keys():
+                substring[text[next]] = next
+                if len(substring.keys()) > longest_substring:
+                    longest_substring = len(substring.keys())
 
             else:
                 repeated = True
+                skip_to_index = substring[text[next]] + 1
                 
-                
-                
-
     return longest_substring
 
 
@@ -47,6 +44,7 @@ def longest_unique_substring(text: str) -> int:
         # "pwwkew"	3
         # ""	0
     # For example, "abcabcbb" contains "abc", which is three characters long with no repetitions.
+
 
 if __name__ == '__main__':
     print(longest_unique_substring('abcabcbb'))
