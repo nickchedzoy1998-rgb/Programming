@@ -26,7 +26,7 @@ Any of these fields may be absent. Treat leading/trailing whitespace as insignif
 For each record, in input order:
 
 1. **ID:** Remove surrounding whitespace. Reject a missing or empty ID with reason `"missing_id"`.
-2. **Amount:** Accept only **strictly positive** amounts with no more than **two decimal places**. `"12"`, `"12.5"` and `"12.50"` are valid; `"0"`, `"-3"`, `"abc"`, `"12.345"` and `"NaN"` are invalid. Reject invalid or missing amounts with reason `"invalid_amount"`. Do not silently round.
+2. **Amount:** Accept only **strictly positive** amounts with no more than **two decimal places**. `"12"`, `"12.5"` and `"12.50"` are valid; `"0"`, `"-3"`, `"abc"`, `"12.345"` is invalid. Reject invalid or missing amounts with reason `"invalid_amount"`. Do not silently round.
 3. **Currency:** Strip whitespace and convert to uppercase. Only `GBP` and `USD` are supported. Reject missing/unsupported currencies with reason `"unsupported_currency"`.
 4. **Duplicates:** If a transaction ID has **already been accepted** earlier in the same batch, reject the later record with reason `"duplicate_id"`. An earlier *rejected* record does **not** reserve its ID.
 
@@ -88,3 +88,5 @@ python practice/practical/session_01/run.py
 **Suggested time:** 30–40 minutes, followed by a short discussion of design choices, testing, edge cases and scaling.
 
 No third-party packages are required. The test runner contains no solution or implementation hints.
+
+**Practice scope:** This exercise covers ordinary decimal-string amounts with at most two decimal places. Special floating-point representations such as `NaN` and `Infinity` and very large amounts are intentionally not tested. In real financial systems, exact decimal arithmetic and additional input validation are recommended.
