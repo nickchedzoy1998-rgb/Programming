@@ -44,7 +44,7 @@ def process_transactions(records: list[dict[str, str]]) -> tuple[list[dict], lis
             rejected_records.append({'index': i, 'reason': 'invalid_amount'})
             continue
 
-        amount_cents = int(float(amount)) * 100
+        amount_cents = round(float(amount) * 100)
 
         currency = record.get('currency', 'none').strip().upper()
 
