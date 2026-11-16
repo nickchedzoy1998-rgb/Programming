@@ -1,5 +1,15 @@
 """Session 01: longest contiguous substring with no repeated characters."""
 
+# The challenge: Longest substring without repeating characters
+# Write a Python function that returns the length of the longest contiguous substring containing no repeated characters.
+"""
+# Input	Expected output
+    # "abcabcbb"	3
+    # "bbbbb"	1
+    # "pwwkew"	3
+    # ""	0
+For example, "abcabcbb" contains "abc", which is three characters long with no repetitions.
+"""
 
 def longest_unique_substring(text: str) -> int:
     """Return the length of the longest substring with no repeated characters."""
@@ -34,17 +44,6 @@ def longest_unique_substring(text: str) -> int:
                 skip_to_index = substring[text[next]] + 1
                 
     return longest_substring
-
-
-# The challenge: Longest substring without repeating characters
-# Write a Python function that returns the length of the longest contiguous substring containing no repeated characters.
-    # Input	Expected output
-        # "abcabcbb"	3
-        # "bbbbb"	1
-        # "pwwkew"	3
-        # ""	0
-    # For example, "abcabcbb" contains "abc", which is three characters long with no repetitions.
-
 
 if __name__ == '__main__':
     print(longest_unique_substring('abcabcbb'))
